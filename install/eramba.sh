@@ -29,31 +29,33 @@ sleep 2
 apt install net-tools git python3 python3-pip docker.io docker-compose -y
 git clone https://github.com/eramba/docker
 cd docker
-
-# Modify the environment files.
-
+# Path to your .env file
 envFile=".env"
-updateTheEnv() {
-    local envName=$1
-    local envValue=$2
-    sed -i "s/^${envName}=.*/${envValue}=${newEnvValue}/" $envFile
+updateEnv() {
+  local envName=$1
+  local envValue=$2
+  sed -i "s/^${envName}=.*/${envName}=${envValue}/" $envFile
 }
 
-read -p "Enter new DB_PASSWORD : " new_db_password
+# Prompt user for new DB_PASSWORD
+read -p "Enter new DB_PASSWORD: " new_db_password
 if [ ! -z "$new_db_password" ]; then
-    updateTheEnv "DB_PASSWORD" "$new_db_password"
-    echo "New Password Set."
+  updateEnv "DB_PASSWORD" "$new_db_password"
+  echo "DB_PASSWORD updated to $new_db_password."
 else
-    echo "New Password Set Failed."
+  echo "DB_PASSWORD was not updated."
 fi
 
+# Prompt user for new MYSQL_ROOT_PASSWORD
 read -p "Enter new MYSQL_ROOT_PASSWORD: " new_mysql_root_password
 if [ ! -z "$new_mysql_root_password" ]; then
-  update_env_var "MYSQL_ROOT_PASSWORD" "$new_mysql_root_password"
-  echo "New Password Set."
+  updateEnv "MYSQL_ROOT_PASSWORD" "$new_mysql_root_password"
+  echo "MYSQL_ROOT_PASSWORD updated to $new_mysql_root_password."
 else
-  echo "New Password Set Failed."
+  echo "MYSQL_ROOT_PASSWORD was not updated."
 fi
+
+echo "Update completed."
 
 echo "Environment Variables Updated Successfully."
 
