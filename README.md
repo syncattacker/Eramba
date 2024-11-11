@@ -10,14 +10,14 @@ This repository contains scripts and documentation to automate the installation 
 
 ## Repository Structure:
 
-- `install/`: Contains the installation scripts for different environments, a ubuntu ova with pre-installed Eramba.
+- `install/`: Contains the installation scripts for different environments, along with an Ubuntu OVA with pre-installed Eramba.
 - `docs/`: Contains detailed documentation on common errors and their resolutions.
 - `logs/`: A log of known issues and the steps taken to resolve them during the installation process.
 
 ## Installation Instructions:
 
 1. Clone the repository.
-2. Follow the installation steps provided in the `install/` directory.
+2. Follow the installation steps provided in the [docs/script-usage.docs](docs/script-usage.docs) file.
 3. Refer to the `docs/` directory for solutions to any issues encountered during installation.
 
 ## Contributing:
