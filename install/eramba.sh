@@ -18,17 +18,19 @@ clear
 
 # Driver main code.
 figlet "Eramba Installer"
+echo "by @syncattacker"
 
 # Update and Updgrade 
 apt update && apt upgrade -y
 
 echo "The following packages will be installed net-tools git python3 python3-pip docker.io docker-compose"
-sleep 2
+sleep 5
 
 # Install necessary libraries required
 apt install net-tools git python3 python3-pip docker.io docker-compose -y
 git clone https://github.com/eramba/docker
 cd docker
+
 # Path to your .env file
 envFile=".env"
 updateEnv() {
@@ -61,6 +63,6 @@ echo "Environment Variables Updated Successfully."
 
 echo "Checking Internet Connection."
 curl  https://support-v3.eramba.org/ping.html
-docker compose -f docker-compose.simple-install.yml down
-docker compose -f docker-compose.simple-install.yml up -d
+docker-compose -f docker-compose.simple-install.yml down
+docker-compose -f docker-compose.simple-install.yml up -d
 docker logs -f eramba
