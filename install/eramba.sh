@@ -1,16 +1,20 @@
 #!/bin/bash
 
+# Enable exit on error
+set -e
+
 echo "Starting Installation . . ."
 
 # Check for root privilege for installations
-
-if [ "$(whoami)" == "root" ]; then
-    echo "Root privileges are required."
+if [ "$(whoami)" != "root" ]; then
+    echo "Root privileges are required. Exiting."
+    exit 1
 else
     echo "You are good to go."
 fi
 
 # Figlet for ASCII art.
+echo "Installing figlet for ASCII art . . ."
 apt install figlet -y
 
 # Clear the terminal.
@@ -20,22 +24,29 @@ clear
 figlet "Eramba Installer"
 echo "by @syncattacker"
 
-# Update and Updgrade 
+# Update and Upgrade 
+echo "Updating and upgrading system . . ."
 apt update && apt upgrade -y
 
-echo "The following packages will be installed net-tools git python3 python3-pip docker.io docker-compose"
+echo "The following packages will be installed: net-tools, git, python3, python3-pip, docker.io, docker-compose"
 sleep 5
 
 # Install necessary libraries required
+echo "Installing required packages . . ."
 apt install net-tools git python3 python3-pip docker.io docker-compose -y
+
+# Clone the Eramba repository
+echo "Cloning the Eramba repository..."
 git clone https://github.com/eramba/docker
 cd docker
 
 # Path to your .env file
 envFile=".env"
+# Function to update environment variable in .env file
 updateEnv() {
   local envName=$1
   local envValue=$2
+  echo "Updating $envName..."
   sed -i "s/^${envName}=.*/${envName}=${envValue}/" $envFile
 }
 
@@ -57,12 +68,20 @@ else
   echo "MYSQL_ROOT_PASSWORD was not updated."
 fi
 
-echo "Update completed."
-
 echo "Environment Variables Updated Successfully."
 
-echo "Checking Internet Connection."
-curl  https://support-v3.eramba.org/ping.html
-docker-compose -f docker-compose.simple-install.yml down
-docker-compose -f docker-compose.simple-install.yml up -d
-docker logs -f eramba
+# Checking Internet Connection
+echo "Checking Internet Connection . . ."
+curl https://support-v3.eramba.org/ping.html || { echo "Internet connection check failed. Exiting."; exit 1; }
+
+# Stop any running containers and start Eramba
+echo "Stopping any running containers . . ."
+docker-compose -f docker-compose.simple-install.yml down || { echo "Failed to stop containers. Exiting."; exit 1; }
+
+echo "Starting Eramba containers..."
+docker-compose -f docker-compose.simple-install.yml up -d || { echo "Failed to start containers. Exiting."; exit 1; }
+
+echo "Displaying logs..."
+docker logs -f eramba || { echo "Failed to display logs. Exiting."; exit 1; }
+
+echo "Installation completed successfully."
