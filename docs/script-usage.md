@@ -23,7 +23,7 @@ This script automates the installation and configuration of **Eramba**, a Govern
 1. Clone or download the script to your server:
 
    ```bash
-   git clone https://github.com/yourusername/eramba-installer.git
+   git clone https://github.com/syncattacker/Eramba.git
    cd eramba-installer
    chmod +x eramba_installer.sh
    sudo ./eramba_installer.sh
