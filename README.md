@@ -17,7 +17,7 @@ This repository contains scripts and documentation to automate the installation 
 ## Installation Instructions:
 
 1. Clone the repository.
-2. Follow the installation steps provided in the [docs/script-usage.docs](docs/script-usage.docs) file.
+2. Follow the installation steps provided in the [docs/script-usage.docs](docs/script-usage.md) file.
 3. Refer to the `docs/` directory for solutions to any issues encountered during installation.
 
 ## Contributing:
