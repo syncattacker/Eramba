@@ -13,6 +13,15 @@ This repository is structured to provide clear, organized resources to help you 
 
 - **[LICENSE](LICENSE)**: License information for this repository.
 
-With this repository, you can access all essential files and instructions to quickly install and start using Eramba, backed by comprehensive documentation and troubleshooting guides.
+## Eramba Pre-Installed OVA
+
+For a ready-made environment with Eramba pre-installed on Ubuntu, you can download the [Eramba pre-installed OVA.](https://drive.google.com/file/d/1I2wBlRqxL6XjMGLd4ZSXKpQNrzz8SPhr/view?usp=sharing).
+
+The default credentials for this OVA are:
+
+- **Username**: `eramba`
+- **Password**: `kali`
+
+With this repository and the pre-installed OVA, you have access to all essential files and instructions to quickly install and start using Eramba, backed by comprehensive documentation and troubleshooting guides.
 
 Happy Hacking!
