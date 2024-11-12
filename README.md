@@ -15,4 +15,4 @@ This repository is structured to provide clear, organized resources to help you 
 
 With this repository, you can access all essential files and instructions to quickly install and start using Eramba, backed by comprehensive documentation and troubleshooting guides.
 
-Happy Installing!
+Happy Hacking!
