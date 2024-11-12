@@ -1,21 +1,18 @@
 # Eramba Installer and Documentation Repository
 
-Welcome to the Eramba Installer and Documentation repository! This repository provides a one-click installer script for Eramba, along with detailed documentation and troubleshooting guides. Our goal is to simplify the installation and setup of Eramba while offering comprehensive documentation to help users manage, troubleshoot, and understand the tool.
+Welcome to the Eramba Installer and Documentation repository! This repository is designed to streamline the installation of Eramba and provide all the necessary documentation and troubleshooting guidance for managing, configuring, and troubleshooting the tool.
 
-## Repository Structure
+## Folders and Resources
 
-Here’s an overview of the repository structure, with descriptions and links to help you locate important files and documentation:
+This repository is structured to provide clear, organized resources to help you install and manage Eramba with ease. Each folder includes specific types of files and documentation:
 
-```plaintext
-Eramba
-├── [docs](docs/)
-│   ├── [Documentation.md](docs/Documentation.md)             Overview of GRC and Eramba
-│   └── [Script-Usage.md](docs/Script-Usage.md)               Usage instructions for the `eramba.sh` installer script
-├── [install](install/)
-│   ├── [eramba.sh](install/eramba.sh)                        Main one-click installer script for Eramba
-│   └── [Eramba-Script.md](install/Eramba-Script.md)          Breakdown and explanation of `eramba.sh`
-├── [logs](logs/)
-│   └── [Error-Documentation.md](logs/Error-Documentation.md)  Common installation errors and troubleshooting steps
-├── [LICENSE](LICENSE)                                        License for this repository
-└── [README.md](README.md)                                    This readme file
-```
+- **[docs](docs/)**: This folder contains all documentation related to Eramba and Governance, Risk, and Compliance (GRC). You’ll find resources to help you understand Eramba’s purpose, usage, and setup.
+- **[install](install/)**: This folder includes the `eramba.sh` one-click installer script, which simplifies Eramba's setup on your system. The folder also includes a code breakdown of the script to help you understand and customize it if needed.
+
+- **[logs](logs/)**: This folder provides troubleshooting resources, including documentation for common installation errors and steps to resolve them.
+
+- **[LICENSE](LICENSE)**: License information for this repository.
+
+With this repository, you can access all essential files and instructions to quickly install and start using Eramba, backed by comprehensive documentation and troubleshooting guides.
+
+Happy Installing!
