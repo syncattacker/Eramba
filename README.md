@@ -1,4 +1,4 @@
-# Eramba Installer and Documentation Repository
+# Eramba Installer and Documentation
 
 Welcome to the Eramba Installer and Documentation repository! This repository is designed to streamline the installation of Eramba and provide all the necessary documentation and troubleshooting guidance for managing, configuring, and troubleshooting the tool.
 
