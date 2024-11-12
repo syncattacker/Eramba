@@ -6,7 +6,7 @@ When installing Eramba using Docker, users may encounter several common issues. 
 
 - **Error**: Changes to the `.env` file do not take effect unless the Docker containers are restarted.
 - **Solution**: Always stop the containers before modifying the `.env` file and restart them afterward for the changes to take effect. This ensures that the new environment variables are loaded properly.
-- **Reference**: [Eramba Docker Installation Guide](https://github.com/eramba/docker)&#8203;:contentReference[oaicite:0]{index=0}
+- **Reference**: [Eramba Docker Installation Guide](https://github.com/eramba/docker)&#8203;
 
 ## 2. Database Connection Errors
 
@@ -16,26 +16,26 @@ When installing Eramba using Docker, users may encounter several common issues. 
   ```bash
   chmod 755 docker/mysql -R
   ```
-- **Reference**: [Eramba Docker Issues](https://github.com/eramba/docker/issues/12)&#8203;:contentReference[oaicite:1]{index=1}&#8203;:contentReference[oaicite:2]{index=2}
+- **Reference**: [Eramba Docker Issues](https://github.com/eramba/docker/issues/12)&#8203;
 
 ## 3. CSRF Token Errors
 
 - **Error**: "CSRF Invalid Token" errors occur.
 - **Cause**: This issue may arise from repeatedly clicking without waiting for the page to load or using the same browser session across multiple accounts.
 - **Solution**: Clear browser cookies and sessions to resolve CSRF token validation issues.
-- **Reference**: [Eramba Docker Troubleshooting](https://github.com/eramba/docker/issues/13)&#8203;:contentReference[oaicite:3]{index=3}&#8203;:contentReference[oaicite:4]{index=4}
+- **Reference**: [Eramba Docker Troubleshooting](https://github.com/eramba/docker/issues/13)&#8203;
 
 ## 4. Incorrect Public Address Setting
 
 - **Error**: Issues such as settings not saving or logos not loading due to incorrectly configured public addresses in the `.env` file.
 - **Solution**: Make sure that the public address is correctly set in the `.env` file before deploying containers. Any changes to this setting should be followed by stopping and redeploying the containers.
-- **Reference**: [Eramba Docker Documentation](https://eramba.org/docs/docker-installation)&#8203;:contentReference[oaicite:5]{index=5}
+- **Reference**: [Eramba Docker Documentation](https://eramba.org/docs/docker-installation)&#8203;
 
 ## 5. Image Switching for Updates
 
 - **Error**: Problems when updating the Eramba Docker image.
 - **Solution**: To update, stop the containers, remove the old images, pull the new version, and ensure that data persistence (especially for databases) is maintained.
-- **Reference**: [Eramba Docker Updates](https://github.com/eramba/docker/issues/14)&#8203;:contentReference[oaicite:6]{index=6}&#8203;:contentReference[oaicite:7]{index=7}
+- **Reference**: [Eramba Docker Updates](https://github.com/eramba/docker/issues/14)&#8203;
 
 ## Conclusion
 
